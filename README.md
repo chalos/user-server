@@ -29,9 +29,10 @@ user-server for Shumin
 ```
 
 ## User API:
-No.| URI | METHOD | PARAMETER | RETURN_VALUE | Detail
--- | --- | ------ | --------- | ------------ | --------
-1 | ${MY_IP}/users | GET | None | [{/*user data*/}] | Get all user data in db
-2 | ${MY_IP}/users/:key/:value | GET | :key, :value | {/*user data*/} | Replace :key and :value in URI to change the query option, e.g: "${MY_IP}/users/name/Chalos" is meant to query "name" as key, "Chalos" as value
-3 | ${MY_IP}/users/add | POST | {email, passwd, name} | {success: true} or {error: {status}, message} | email, passwd, name are REQUIRED as parameter to add new User
-4 | ${MY_IP}/users/update/:key/:value | POST | :key, :value, {/*key value pair in Schema*/} | replace :key, :value in URI as above(2), and Schema that have " * " at behind are unable to be edited.
+
+| No. | URI                               | METHOD | PARAMETER                                    | RETURN_VALUE                               | Detail                                                                                                                                          |
+|-----|-----------------------------------|--------|----------------------------------------------|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | ${MY_IP}/users                    | GET    | None                                         | {/*user data*/}                            | Get all user data from db                                                                                                                       |
+| 2   | ${MY_IP}/users/:key/:value        | GET    | :key, :value                                 | {/*user data*/}                            | Replace :key and :value in URI to change the query option, e.g: "${MY_IP}/users/name/Chalos" is meant to query "name" as key, "Chalos" as value |
+| 3   | ${MY_IP}/users/add                | POST   | {email, passwd, name}                        | {success: true} {error: {status}, message} | email, passwd, name are REQUIRED as parameter to add new User                                                                                   |
+| 4   | ${MY_IP}/users/update/:key/:value | POST   | :key, :value, {/*key value pair in Schema*/} | {success: true} {error: {status}, message} | replace :key, :value in URI as above(2), and Schema that have " * " at behind are unable to be edited.                                          |
