@@ -3,7 +3,7 @@ user-server for Shumin
 
 ## User DB Schema
 
-``` json
+``` javascript
 {
 // vvvvvvv REQUIRED vvvvvvv
     active: true,			// *
