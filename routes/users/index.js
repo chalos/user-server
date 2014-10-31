@@ -31,7 +31,7 @@ router.post('/update/:key/:val', function(req, res, next){
 	});
 });
 
-router.put('/add', function(req, res, next){
+router.post('/add', function(req, res, next){
 	var userData = req.body || {};
 
 	user.add(userData, function(err, result){
